@@ -1,10 +1,24 @@
+body {
+}
+
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .container {
     display: flex;
+    padding: 30px;
 }
 
 button {
     background-color: rgb(153, 153, 220);
-    flex-direction: row;
+    padding: 10px;
+    margin: 10px;
+}
+
+.button {
+    text-align: center;
 }
 
 .rootDiv {   
