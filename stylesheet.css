@@ -1,4 +1,19 @@
-button {
-    background-color: rgb(153, 153, 220);
+.container {
+    display: flex;
 }
 
+button {
+    background-color: rgb(153, 153, 220);
+    flex-direction: row;
+}
+
+.rootDiv {   
+}
+
+.rowFloat {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+}
