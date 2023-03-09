@@ -7,11 +7,12 @@ function defaultGrid(col, row) {
         document.querySelector(".container").append(rootDiv);
         
         let poop = c;
-        let interval = 16 * c;
+        let interval = col * c;
         for (let r = 0; r < row; r++) {
             newRow = document.createElement("div");
             newRow.classList.add("divSquares"); 
             newRow.setAttribute("id",`divSquares${r+interval}`);
+            newRow.setAttribute("style", `width: ${500/row}px; height: ${500/row}px;`)
             document.querySelector(".rootDiv"+poop).append(newRow);
         }
     }
