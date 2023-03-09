@@ -8,6 +8,7 @@ header {
 
 .container {
     display: flex;
+    justify-content: center;
     padding: 30px;
 }
 
@@ -24,10 +25,16 @@ button {
 .rootDiv {   
 }
 
-.rowFloat {
+.divSquares {
     box-sizing: border-box;
     border: 1px solid black;
     width: 10px;
     height: 10px;
-    padding: 10px;
+    padding: 10px; /* todo: change fixed square sizes to flexible size to
+    fill a specified container height/width */
 }
+
+/* .divSquares:hover {
+    background-color: blue;
+}
+
