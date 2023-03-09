@@ -1,15 +1,16 @@
-body {
-}
-
 header {
     text-align: center;
     margin-top: 20px;
 }
 
 .container {
+    width: 500px;
+    height: 500px;
     display: flex;
     justify-content: center;
     padding: 30px;
+    margin: auto;
+    overflow: hidden;
 }
 
 button {
@@ -27,14 +28,10 @@ button {
 
 .divSquares {
     box-sizing: border-box;
-    border: 1px solid black;
-    width: 10px;
-    height: 10px;
-    padding: 10px; /* todo: change fixed square sizes to flexible size to
-    fill a specified container height/width */
+    border: 1px solid black; 
 }
 
 /* .divSquares:hover {
     background-color: blue;
-}
+} */
 
