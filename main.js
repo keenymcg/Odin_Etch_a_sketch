@@ -1,18 +1,13 @@
-function resetGrid() {
-    // todo: HOW TO RESET???
-}
-
 function defaultGrid(newVal) {
-    // may need reset at the start of this default grid
-    for (let c = 0; c < newVal; c++) {
-        let rootDiv = document.createElement("div");
-        
-        rootDiv.classList.add("rootDiv", "rootDiv"+c);
+    for (let c = 0; c < newVal; c++) { 
+        // creates the parent div for all the divSquare children, and classes/Id, orders & appends
+        let rootDiv = document.createElement("div"); 
+        rootDiv.classList.add("rootDiv"+c);
         rootDiv.setAttribute("id","rootDiv"+c);
-        document.querySelector(".container").append(rootDiv);
+        document.querySelector("#container").append(rootDiv);
         
-        let poop = c;
-        let interval = newVal * c;
+        let poop = c; // creates a var 
+        let interval = newVal * c; // aka userInput * iteration in order to give all divSquares unique IDs
         for (let r = 0; r < newVal; r++) {
             newRow = document.createElement("div");
             newRow.classList.add("divSquares"); 
@@ -29,7 +24,24 @@ function removeAllChildren(parent) {
     }   
 };
 
-const theGrid = document.querySelector('.container');
+function colorSquares(val2) {
+    for (i = 0; i < (val2*val2); i++) {
+        let divSquares = document.getElementById("divSquares"+i);
+        divSquares.addEventListener("mouseover", (e) => {
+            divSquares.style.backgroundColor = "blue";
+        })
+    };
+};
+
+
+function startEtch() {
+    defaultGrid(16);
+    colorSquares(16);
+};
+
+startEtch();
+
+const theGrid = document.querySelector('#container');
 
 const slider = document.querySelector('#slider');
 const screenVal = document.querySelector('.value');
@@ -39,27 +51,12 @@ slider.addEventListener('input', function() {
     let val2 = parseInt(val);
     removeAllChildren(theGrid);
     defaultGrid(val2);
-    // console.log(val2);
-    // console.log(typeof val); //returns string
-    for (i = 0; i < (val2*val2); i++) {
-        let divSquares = document.getElementById("divSquares"+i);
-        divSquares.addEventListener("mouseover", (e) => {
-            divSquares.style.backgroundColor = "blue";
-        })
-    };
+    colorSquares(val2);
+    
+    const clearGridButton = document.querySelector("#clearGrid");
+    clearGridButton.addEventListener('click', function() {
+        removeAllChildren(theGrid);
+        defaultGrid(val2);
+        colorSquares(val2);
 });
-
-// THIS was supposed to GETS OUR GRID VALUE
-let newVal = 0;
-function sliderValue() {
-    slider.addEventListener('input', function() {
-        let val = document.getElementById("slider").value;
-        // console.log(val);
-        // console.log(typeof val);
-        newVal = parseInt(val);
-        // console.log(newVal);
-        // console.log(typeof newVal);
-    });
-};
-
-sliderValue();
+});
