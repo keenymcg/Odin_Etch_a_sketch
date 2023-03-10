@@ -23,12 +23,21 @@ function defaultGrid(newVal) {
     }
 };
 
+function removeAllChildren(parent) {
+    while(parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }   
+};
+
+const theGrid = document.querySelector('.container');
+
 const slider = document.querySelector('#slider');
 const screenVal = document.querySelector('.value');
 slider.addEventListener('input', function() {
     let val = document.getElementById("slider").value;
     screenVal.textContent = val;
     let val2 = parseInt(val);
+    removeAllChildren(theGrid);
     defaultGrid(val2);
     // console.log(val2);
     // console.log(typeof val); //returns string
