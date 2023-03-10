@@ -61,9 +61,23 @@ function resetGrid(val2) {
     });
 };
 
+function checkButtonColor(val2){
+    const btnRgb = document.getElementById("btnRGB");
+    btnRgb.addEventListener('click', () => {
+        randomColorSquares(val2);
+    });
+    const btnBlack = document.getElementById("btnBlack");
+    btnBlack.addEventListener('click', () => {
+        blackSquares(val2);
+    });
+}
+
+
 function startEtch() {
     defaultGrid(16);
     blackSquares(16);
+        // putting button choices here, moving blackSquares inside event listener
+    checkButtonColor(16);
     resetGrid(16);
 };
 
@@ -80,9 +94,7 @@ slider.addEventListener('input', function() {
     removeAllChildren(theGrid);
     defaultGrid(val2);
     blackSquares(val2);
+    checkButtonColor(val2);
     resetGrid(val2);
 });
-
-
-// Create a random color
 
