@@ -1,5 +1,5 @@
 function resetGrid() {
-    
+    // todo: HOW TO RESET???
 }
 
 function defaultGrid(newVal) {
@@ -20,7 +20,6 @@ function defaultGrid(newVal) {
             newRow.setAttribute("style", `width: ${500/newVal}px; height: ${500/newVal}px;`)
             document.querySelector(".rootDiv"+poop).append(newRow);
         } 
-    resetGrid();
     }
 };
 
