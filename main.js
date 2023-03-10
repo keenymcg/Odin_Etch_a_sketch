@@ -30,3 +30,29 @@ for (i = 0; i < (16*16); i++) {
         divSquares.style.backgroundColor = "blue";
     })
 };
+
+const slider = document.querySelector('#slider');
+const screenVal = document.querySelector('.value');
+slider.addEventListener('input', function() {
+    let val = document.getElementById("slider").value;
+    screenVal.textContent = val;
+});
+
+// THIS GETS OUR GRID VALUE
+let newVal = 0;
+function sliderValue() {
+    slider.addEventListener('input', function() {
+        let val = document.getElementById("slider").value;
+        // console.log(val);
+        // console.log(typeof val);
+        newVal = parseInt(val);
+        // console.log(newVal);
+        // console.log(typeof newVal);
+    });
+};
+
+sliderValue();
+
+// want the slider to affect the row value
+// col in defaultGrid is redundant, remove and replace cols with rows
+// maybe I pass into defaultGrid( anon func()) a function the returns the slider value
