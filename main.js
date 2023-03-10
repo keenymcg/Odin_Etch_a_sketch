@@ -24,19 +24,29 @@ function removeAllChildren(parent) {
     }   
 };
 
-function colorSquares(val2) {
+function blackSquares(val2) {
     for (i = 0; i < (val2*val2); i++) {
         let divSquares = document.getElementById("divSquares"+i);
         divSquares.addEventListener("mouseover", (e) => {
-            divSquares.style.backgroundColor = "blue";
+            divSquares.style.backgroundColor = "black";
         })
     };
 };
 
 
+function resetGrid(val2) {
+    const clearGridButton = document.querySelector("#clearGrid");
+    clearGridButton.addEventListener('click', function() {
+        removeAllChildren(theGrid);
+        defaultGrid(val2);
+        blackSquares(val2);
+    });
+};
+
 function startEtch() {
     defaultGrid(16);
-    colorSquares(16);
+    blackSquares(16);
+    resetGrid(16);
 };
 
 startEtch();
@@ -51,12 +61,12 @@ slider.addEventListener('input', function() {
     let val2 = parseInt(val);
     removeAllChildren(theGrid);
     defaultGrid(val2);
-    colorSquares(val2);
-    
-    const clearGridButton = document.querySelector("#clearGrid");
+    blackSquares(val2);
+    resetGrid(val2);
+    /* const clearGridButton = document.querySelector("#clearGrid");
     clearGridButton.addEventListener('click', function() {
         removeAllChildren(theGrid);
         defaultGrid(val2);
-        colorSquares(val2);
-});
+        blackSquares(val2);
+}); */
 });

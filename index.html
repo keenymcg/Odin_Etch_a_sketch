@@ -8,18 +8,24 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <header id="header">Draw your heart out!</header>
 
-    <div class="button">
-        <button id="clearGrid">Refresh Grid</button>
+    <div class="bg">
+
+        <header id="header">
+            <div class="button">
+                <button id="clearGrid">Refresh Grid</button>
+            </div>
+            <img id="logo" src="images/etch_logo"/>
+            <h1>Draw your heart out!</h1>
+            <div class="sliderAndValue">
+                <input type="range" min="2" max="100" value="16" id="slider">
+                <p class="value">16</p>
+            </div>
+        </header>
+
+        <div id="container"></div>
+
     </div>
-
-    <div class="sliderAndValue">
-        <input type="range" min="2" max="100" value="16" id="slider">
-        <p class="value">16</p>
-    </div>
-
-    <div id="container"></div>
     <script src="main.js"></script>
 </body>
 </html>
