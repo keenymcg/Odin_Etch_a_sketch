@@ -33,6 +33,24 @@ function blackSquares(val2) {
     };
 };
 
+function randomColor() {
+    let color = "";
+    for(let i = 0; i < 3; i++) {
+        let sub = Math.floor(Math.random() * 256).toString(16);
+        color += (sub.length == 1 ? "0" + sub : sub);
+    }
+    return "#" + color;
+}
+
+function randomColorSquares(val2) {
+    for (i = 0; i < (val2*val2); i++) {
+        let divSquares = document.getElementById("divSquares"+i);
+        divSquares.addEventListener("mouseover", (e) => {
+            divSquares.style.backgroundColor = randomColor();
+        })
+    };
+}
+
 
 function resetGrid(val2) {
     const clearGridButton = document.querySelector("#clearGrid");
@@ -63,10 +81,8 @@ slider.addEventListener('input', function() {
     defaultGrid(val2);
     blackSquares(val2);
     resetGrid(val2);
-    /* const clearGridButton = document.querySelector("#clearGrid");
-    clearGridButton.addEventListener('click', function() {
-        removeAllChildren(theGrid);
-        defaultGrid(val2);
-        blackSquares(val2);
-}); */
 });
+
+
+// Create a random color
+

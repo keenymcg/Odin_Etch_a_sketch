@@ -34,7 +34,7 @@ h1 {
     overflow: hidden;
 }
 
-button {
+#clearGrid {
     background-color: #f04040;
     color: white;
     font-weight: bold;
@@ -46,6 +46,28 @@ button {
 
 .button {
     text-align: center;
+}
+
+#colorChoices {
+    text-align: center;
+}
+
+#colorChoices button {
+    padding: 10px;
+    margin: 0 20px;
+    margin-bottom: -10px;
+    font-weight: bold;
+    border-radius: 8px;;
+}
+
+#btnBlack {
+    background-color: black;
+    color: white
+}
+
+#btnRGB {
+    background-color: blue;
+    color: white;
 }
 
 .divSquares {
