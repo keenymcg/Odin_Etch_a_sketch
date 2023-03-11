@@ -25,7 +25,7 @@ h1 {
 }
 
 .bg {
-    background-image: url("https://github.com/keenymcg/Odin_Etch_a_sketch/blob/main/images/pattern.png?raw=true");
+    background-image: url("/images/pattern.PNG");
 }
 
 #container {
