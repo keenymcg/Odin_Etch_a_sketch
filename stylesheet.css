@@ -1,3 +1,7 @@
+body {
+    margin: -20px auto -30px auto;
+}
+
 header {
     text-align: center;
     margin-top: 20px;
@@ -21,7 +25,7 @@ h1 {
 }
 
 .bg {
-    background-image: url("/images/pattern.png");
+    background-image: url("https://github.com/keenymcg/Odin_Etch_a_sketch/blob/main/images/pattern.png?raw=true");
 }
 
 #container {
@@ -30,8 +34,11 @@ h1 {
     height: 500px;
     display: flex;
     justify-content: center;
-    margin: 50px auto;
+    margin: auto auto;
     overflow: hidden;
+    border: 6px solid rgb(255, 0, 0);
+    box-shadow: 6px 6px black;
+    border-radius: 7px;;
 }
 
 #clearGrid {
@@ -41,6 +48,7 @@ h1 {
     padding: 10px;
     margin: 0 auto;
     border-radius: 5px;
+    cursor: pointer;
 
 }
 
@@ -55,7 +63,7 @@ h1 {
 #colorChoices button {
     padding: 10px;
     margin: 0 20px;
-    margin-bottom: -10px;
+    margin-bottom: 20px;
     font-weight: bold;
     border-radius: 8px;
 }
@@ -63,17 +71,19 @@ h1 {
 #colorChoices #btnRGB:hover {
     padding: 13px;
     margin: 0 20px;
-    margin-bottom: -10px;
+    margin-bottom: -4px;
     font-weight: bold;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 #colorChoices #btnBlack:hover {
     padding: 13px;
     margin: 0 20px;
-    margin-bottom: -10px;
+    margin-bottom: -4px;
     font-weight: bold;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 #btnBlack {
