@@ -1,31 +1,25 @@
 body {
     margin: -20px auto -30px auto;
+    background-image: url(images/background_2.png);
+    background-repeat: repeat;
+    background-size: 25%;
+    overflow: hidden;
 }
 
 header {
     text-align: center;
+    border-bottom: 8px solid black;
     margin-top: 20px;
     margin-bottom: 20px;
     backdrop-filter: blur(100px);
     display: flex;
     justify-content: center;
-    border-bottom: 8px solid black;
     align-items: center;
-}
-
-h1 {
-    margin-bottom: 20px;
-    font-family: cursive;
-    display: none;
 }
 
 #logo {
     width: 25%;
     margin: 10px 20px;
-}
-
-.bg {
-    background-image: url("/images/pattern.png");
 }
 
 #container {
@@ -49,7 +43,6 @@ h1 {
     margin: 0 auto;
     border-radius: 5px;
     cursor: pointer;
-
 }
 
 .button {
